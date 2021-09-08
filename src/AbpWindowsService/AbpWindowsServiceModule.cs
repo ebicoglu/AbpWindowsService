@@ -1,12 +1,16 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AbpWindowsService.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
 
 namespace AbpWindowsService
 {
-    [DependsOn(typeof(AbpAutofacModule))]
-    public class WindowsServiceModule : AbpModule
+    [DependsOn(
+        typeof(AbpAutofacModule),
+        typeof(AbpWindowsServiceEntityFrameworkCoreModule))
+    ]
+    public class AbpWindowsServiceModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

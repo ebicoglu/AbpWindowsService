@@ -56,7 +56,7 @@ namespace AbpWindowsService
                 })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddApplication<WindowsServiceModule>();
+                    services.AddApplication<AbpWindowsServiceModule>();
                 });
 
     }
