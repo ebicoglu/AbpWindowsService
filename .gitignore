@@ -318,3 +318,5 @@ tempkey.jwk
 
 # appsettings.secrets.json
 appsettings.secrets.json
+
+src/AbpWindowsService.DbMigrator/Logs/logs.txt
