@@ -1,6 +1,6 @@
 # ABP Windows Service
 
-This is a simple **Windows Service** built on **ABP Framework** (.NET5 and ABP 4.4.2)
+This is a simple **Windows Service** built on **ABP Framework (open source)** (.NET5 and ABP 4.4.2)
 
 Even the ABP version is old, you can apply the same code to your project to run a Windows Service which uses DB transactions.
 
