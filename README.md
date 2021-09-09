@@ -73,9 +73,9 @@ Start a command prompt as an administrator and run `uninstall-service.bat`. This
 
 
 
-### Create console application
+### Create an ABP console application
 
-To create your own Windows Service, create an ABP console application with the following command:
+To create your own Windows Service, you can start with creating an ABP console application with the following command:
 
 ```bash
 abp new AbpWindowsService -t console -csf
