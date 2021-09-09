@@ -48,7 +48,7 @@ To check if it's working, open the following log file
 
 
 
-4 books already added with the data seeder, so you'll see the following lines in the logs. These are the records fetched from the `Books` table.
+I already added 4 database records (books)  with the data seeder, so you'll see the following lines in the logs when the service starts. These are the records fetched from the `Books` table.
 
 ```cmd
 2021-09-08 20:38:17.713 +03:00 [INF] *** Book name: George Orwell 1984
