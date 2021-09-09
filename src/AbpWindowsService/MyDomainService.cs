@@ -6,10 +6,11 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Domain.Repositories;
+using Volo.Abp.Domain.Services;
 
 namespace AbpWindowsService
 {
-    public class MyDomainService : ITransientDependency
+    public class MyDomainService : IDomainService
     {
         private readonly ILogger<MyDomainService> _logger;
         private readonly IBookRepository _bookRepository;
