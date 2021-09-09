@@ -4,15 +4,11 @@ This is a simple **Windows Service** built on **ABP Framework (open source)** (.
 
 Project Structure:
 
-**AbpWindowsService**: This is the Windows Service. You will install this service as Windows Service.
-
-**AbpWindowsService.DbMigrator**: You can create your database and update it with DbMigrator.
-
-**AbpWindowsService.Domain**: Your domain objects like your entities are in this project.
-
-**AbpWindowsService.Domain.Shared**: Shared objects like your entity consts, enums are in this project.
-
-**AbpWindowsService.EntityFrameworkCore**: The EFCore referenced project has DbContext and Migrations.
+*   **AbpWindowsService**: This is the Windows Service. You will install this service as Windows Service.
+*   **AbpWindowsService.DbMigrator**: You can create your database and update it with DbMigrator.
+*   **AbpWindowsService.Domain**: Your domain objects like your entities are in this project.
+*   **AbpWindowsService.Domain.Shared**: Shared objects like your entity consts, enums are in this project.
+*   **AbpWindowsService.EntityFrameworkCore**: The EFCore referenced project has DbContext and Migrations.
 
 For more information see https://docs.abp.io/en/commercial/latest/startup-templates/application/solution-structure
 
