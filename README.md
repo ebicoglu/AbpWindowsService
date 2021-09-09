@@ -87,7 +87,7 @@ abp new AbpWindowsService -t console -csf
 
 Add the [Microsoft.Extensions.Hosting.WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) package to your console application by adding the following line to the csproj:
 
-```json
+```xml
 <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
 ```
 
@@ -120,7 +120,7 @@ Open the **Program.cs** and add  the `UseWindowsService()` to `CreateHostBuilder
 
 ### Set log file path
 
-By default Windows Service runs as local System account and Serilog will write the logs under `C:\Windows\System32`. So you can set the log file as static. Below code lets Serilog write to the Logs folder under your Windows Service installation directory.
+By default Windows Service runs as local System account and Serilog will write the logs under `C:\Windows\System32`. To overcome this, you can set the log file as static path. Below code lets Serilog write to the Logs folder under your Windows Service installation directory.
 
     Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -138,15 +138,15 @@ In your Windows Service there is an ABP module class  `AbpWindowsServiceModule.c
 
 ### Accessing the database
 
-To access your database, entities, repositories and application services you can move your Windows Service into your ABP Web Application solution. To do this, copy the service project to the src folder of your main (web) solution. Add project reference of ***.EntityFrameworkCore**  project to your Windows Service as shown below:
+To access your database and repositories you can move your Windows Service into your main ABP Web Application solution. To do this, copy the service project to the src folder of your main web solution. Add project reference of ***.EntityFrameworkCore**  project to your Windows Service as shown below:
 
-```json
+```xml
 <ProjectReference Include="..\AbpWindowsService.EntityFrameworkCore\AbpWindowsService.EntityFrameworkCore.csproj" />
 ```
 
-Add the `DependsOn` attribute of EntityFramework module to your Windows Service as shown below:
+Add the `DependsOn` attribute of `EntityFramework` module to your Windows Service as shown below:
 
-```
+```csharp
  [DependsOn(
     typeof(AbpAutofacModule),
     typeof(AbpWindowsServiceEntityFrameworkCoreModule)) /// added this line ///
@@ -159,9 +159,11 @@ Add the `DependsOn` attribute of EntityFramework module to your Windows Service 
 
 Now you can inject your repositories into your domain service.
 
-Add your database connection string to the **appsettings.json** of your Windows Service.
 
-```json
+
+Don't forget to add the database connection string to the **appsettings.json** of your Windows Service.
+
+```xml
 {
   "ConnectionStrings": {
     "Default": "Server=(LocalDb)\\MSSQLLocalDB;Database=MyDatabase;Trusted_Connection=True"
@@ -173,7 +175,8 @@ Note that we are using `Trusted_Connection=True` which means,  Windows Authentic
 
 > `Trusted_Connection=True`  will cause a small problem! The default user of a Windows Service is local System account. Therefore you cannot connect your database with the System account. To solve this, apply the **5th** step of **How to install and run?** section in this document. Alternative way; You can create a user in your database and use the UserId-Password credential in the connection string.
 
-And you are ready to install your new service to your Windows! See the **How to install and run?** section to install your service.
+And you are ready to install your new service! See the **How to install and run?** section to install your new service.
+
 
 
 And happy coding!
