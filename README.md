@@ -64,7 +64,7 @@ I already added 4 database records (books)  with the data seeder, so you'll see 
 Start a command prompt as an administrator and run `uninstall-service.bat`. This will uninstall the Window Service. This batch runs the following operations:
 
 - Stops the service if it's running
-- Closes `mmc.exe` if it's open. (*Service cannot be uninstalled if this window is open*)
+- Closes `mmc.exe` if it's open. (*because the service cannot be uninstalled if this window is open*)
 - Removes service with ` sc delete` command.
 
 
