@@ -85,13 +85,13 @@ abp new AbpWindowsService -t console -csf
 
 ### Add Windows Service middleware
 
-Add the [Microsoft.Extensions.Hosting.WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) package to your application by adding the following line to the csproj:
+Add the [Microsoft.Extensions.Hosting.WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) package to your console application by adding the following line to the csproj:
 
 ```json
 <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
 ```
 
-Open the **Program.cs** and add  the `UseWindowsService()` to `CreateHostBuilder` method. You can also set a service name to be shown in services window. `UseWindowsService` ;
+Open the **Program.cs** and add  the `UseWindowsService()` to `CreateHostBuilder` method. You can also set a service name to be shown in services window. `UseWindowsService` makes 3 things:
 
 - Sets the host lifetime to *WindowsServiceLifetime*
 
