@@ -98,11 +98,11 @@ Open the **Program.cs** and add the `UseWindowsService()` to `CreateHostBuilder`
 
 `UseWindowsService` makes 3 things:
 
-Sets the host lifetime to _WindowsServiceLifetime_
+*   Sets the host lifetime to _WindowsServiceLifetime_
 
-Sets the Content Root
+*   Sets the Content Root
 
-Enables logging to the event log with the application name as the default source name
+*   Enables logging to the event log with the application name as the default source name
 
 ### Set log file path
 
