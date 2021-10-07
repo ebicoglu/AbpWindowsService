@@ -1,6 +1,6 @@
 # ABP Windows Service
 
-This is a simple **Windows Service** built on **ABP Framework (open source)** (.NET5 and ABP 4.4.2). The Windows Service uses a local SQL database.
+This is a simple **Windows Service** built on the **ABP Framework (open source)** (.NET5 and ABP 4.4.2). The Windows Service uses a local SQL database.
 
 Project Structure:
 
@@ -20,7 +20,7 @@ Build the solution.
 
 Run the `DbMigrator` project to create the database.
 
-Start a command prompt as an administrator and run `install-service.bat`. This will install the Window Service. Your service name will be `AbpWindowsService`. You can change the service name [from this code line](https://github.com/ebicoglu/AbpWindowsService/blob/main/src/AbpWindowsService/Program.cs#L52).
+Start a command prompt as an administrator and run [install-service.bat](https://github.com/ebicoglu/AbpWindowsService/blob/main/install-service.bat). This will install the Window Service. Your service name will be `AbpWindowsService`. You can change the service name [from this code line](https://github.com/ebicoglu/AbpWindowsService/blob/main/src/AbpWindowsService/Program.cs#L52).
 
 ![](https://user-images.githubusercontent.com/9526587/132733812-a042f301-d766-4e6e-95c5-5a80aa58deb2.png)
 
@@ -53,7 +53,7 @@ I already added 4 database records (books) with [the data seeder](https://github
 
 ## How to uninstall?
 
-Start a command prompt as an administrator and run `uninstall-service.bat`. This will uninstall the Window Service. This batch runs the following operations:
+Start a command prompt as an administrator and run [uninstall-service.bat](https://github.com/ebicoglu/AbpWindowsService/blob/main/uninstall-service.bat). This will uninstall the Window Service. This batch runs the following operations:
 
 *   Stops the service if it's running
 *   Closes `mmc.exe` if it's open. (_because the service cannot be uninstalled if this window is open_)
