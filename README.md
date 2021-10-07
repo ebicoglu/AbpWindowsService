@@ -142,7 +142,7 @@ Add the `DependsOn` attribute of `EntityFramework` module to your Windows Servic
 
 Now you can inject your repositories into your domain service.
 
-Don't forget to add the database connection string to the **appsettings.json** of your Windows Service.
+Don't forget to add the database connection string to the [appsettings.json](https://github.com/ebicoglu/AbpWindowsService/blob/main/src/AbpWindowsService/appsettings.json) of your Windows Service.
 
 ```xml
 {
