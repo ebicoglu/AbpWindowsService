@@ -42,7 +42,7 @@ To check if it's working, open the following logfile
  src\AbpWindowsService\bin\Debug\net5.0\win-x64\Logs\Log.txt
 ```
 
-I already added 4 database records (books) with the data seeder, so you'll see the following lines in the logs when the service starts. These are the records fetched from the `Books` table.
+I already added 4 database records (books) with [the data seeder](https://github.com/ebicoglu/AbpWindowsService/blob/main/src/AbpWindowsService.Domain/IdentityServer/IdentityServerDataSeedContributor.cs#L69), so you'll see the following lines in the logs when the service starts. These are the records fetched from the `Books` table.
 
 ```
 2021-09-08 20:38:17.713 +03:00 [INF] *** Book name: George Orwell 1984
