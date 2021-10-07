@@ -156,6 +156,6 @@ Note that we are using `Trusted_Connection=True` which means, Windows Authentica
 
 > `Trusted_Connection=True` will cause a small problem! The default user of a Windows Service is local System account. Therefore you cannot connect your database with the System account. To solve this, apply the **5th** step of **How to install and run?** section in this document. Alternative way; You can create a user in your database and use the UserId-Password credential in the connection string.
 
-And you are ready to install your new service! See the **How to install and run?** section to install your new service.
+And you are ready to install your new service! See the [How to install and run?](#how-to-install-and-run) section to install your new service.
 
 And happy coding!
