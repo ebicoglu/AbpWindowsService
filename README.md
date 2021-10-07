@@ -14,7 +14,7 @@ For more information see https://docs.abp.io/en/commercial/latest/startup-templa
 
 ## How to install and run?
 
-Clone this repository to your disk.
+Clone [this repository](https://github.com/ebicoglu/AbpWindowsService) to your disk.
 
 Build the solution.
 
