@@ -45,10 +45,10 @@ To check if it's working, open the following logfile
 I already added 4 database records (books) with [the data seeder](https://github.com/ebicoglu/AbpWindowsService/blob/main/src/AbpWindowsService.Domain/IdentityServer/IdentityServerDataSeedContributor.cs#L69), so you'll see the following lines in the logs when the service starts. These are the records fetched from the `Books` table.
 
 ```
-2021-09-08 20:38:17.713 +03:00 [INF] *** Book name: George Orwell 1984
-2021-09-08 20:38:17.713 +03:00 [INF] *** Book name: Lord of the Flies
-2021-09-08 20:38:17.713 +03:00 [INF] *** Book name: Harry Potter
-2021-09-08 20:38:17.713 +03:00 [INF] *** Book name: The Great Gatsby
+[INF] *** Book name: George Orwell 1984
+[INF] *** Book name: Lord of the Flies
+[INF] *** Book name: Harry Potter
+[INF] *** Book name: The Great Gatsby
 ```
 
 ## How to uninstall?
