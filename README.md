@@ -20,7 +20,7 @@ Build the solution.
 
 Run the `DbMigrator` project to create the database.
 
-Start a command prompt as an administrator and run `install-service.bat`. This will install the Window Service. Your service name will be `AbpWindowsService`.
+Start a command prompt as an administrator and run `install-service.bat`. This will install the Window Service. Your service name will be `AbpWindowsService`. You can change the service name [from this code line](https://github.com/ebicoglu/AbpWindowsService/blob/main/src/AbpWindowsService/Program.cs#L52).
 
 ![](https://user-images.githubusercontent.com/9526587/132733812-a042f301-d766-4e6e-95c5-5a80aa58deb2.png)
 
