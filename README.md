@@ -158,4 +158,6 @@ Note that we are using `Trusted_Connection=True` which means, Windows Authentica
 
 And you are ready to install your new service! See the [How to install and run?](#how-to-install-and-run) section to install your new service.
 
+[Click here to download the sample project](https://github.com/ebicoglu/AbpWindowsService)
+
 And happy coding!
